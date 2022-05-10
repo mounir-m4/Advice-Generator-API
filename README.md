@@ -30,7 +30,7 @@ Users should be able to:
   
 ### Links
 
-- Live Site URL: [Generate Advice API](https://shortly-url-api.netlify.app/)
+- Live Site URL: [Generate Advice API](https://advice-generator-api-main.netlify.app/)
 
 ### Screenshot
 

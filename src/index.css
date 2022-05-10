@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  /* ## Colors */
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
 }
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Manrope', sans-serif;
+  background: var(--Dark-Blue);
+  color: var(--Light-Cyan);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 1.5rem;
+	margin: auto;
+	overflow: hidden;
+}
+.advice-box{
+  position: relative;
+  padding: 2rem;
+  margin: 1rem;
+  width: min-content;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.advice-number{
+  color: var(--Neon-Green);
+  margin: 1rem auto;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.advice-text{
+  padding: .5rem;
+  margin: .5rem;
+  font-size: 1.5rem;
+}
+.pattern{
+  margin: 1.5rem auto;
+}
+.dice-button{
+  background: var(--Neon-Green);
+  padding: 1rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all .2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -10%;
+}
+.dice-button:hover {
+  box-shadow: 0px 0px 20px 4px rgba(31,255,143,0.62);
+}
+.dice-button:active{
+  transform: scale(.95);
+}
+/* small smartphones */
+@media screen and (max-width: 500px){
+  .container{
+    margin: 1rem;
+  }
+.advice-box{
+  padding:2rem;
+}
+.advice-number{
+  margin: .5rem auto;
+}
+.advice-text{
+  padding: .5rem 5rem;
+  margin: .5rem;
+  font-family: 1.2rem;
+}
+.pattern{
+  margin: 1rem auto;
+}
 }
